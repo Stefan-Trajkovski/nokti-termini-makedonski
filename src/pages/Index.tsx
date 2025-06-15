@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Calendar, MapPin, Phone, Mail, Clock, Star, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -10,6 +9,13 @@ import TestimonialCard from "@/components/TestimonialCard";
 
 const Index = () => {
   const [showAppointmentModal, setShowAppointmentModal] = useState(false);
+
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services-section');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   const services = [
     {
@@ -111,6 +117,7 @@ const Index = () => {
             </Button>
             
             <Button 
+              onClick={scrollToServices}
               variant="outline" 
               className="border-2 border-rose-500 text-rose-600 hover:bg-rose-50 px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300"
             >
@@ -121,7 +128,7 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 bg-white">
+      <section id="services-section" className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
