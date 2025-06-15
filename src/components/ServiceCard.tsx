@@ -26,13 +26,13 @@ const ServiceCard = ({ service }: ServiceCardProps) => {
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        <Badge className="absolute top-4 right-4 bg-rose-500 hover:bg-rose-600">
+        <Badge className="absolute top-4 right-4 bg-slate-600 hover:bg-slate-700">
           {service.price}
         </Badge>
       </div>
       
       <CardHeader>
-        <CardTitle className="text-xl font-bold text-gray-800 group-hover:text-rose-600 transition-colors">
+        <CardTitle className="text-xl font-bold text-gray-800 group-hover:text-slate-700 transition-colors">
           {service.name}
         </CardTitle>
         <CardDescription className="text-gray-600">

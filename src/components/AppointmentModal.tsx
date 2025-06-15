@@ -24,19 +24,19 @@ const AppointmentModal = ({ isOpen, onClose }: AppointmentModalProps) => {
   });
 
   const services = [
-    "Класичен маникир",
-    "Гел лак", 
-    "Френч маникир",
-    "Nail Art",
-    "Педикир",
-    "СПА третман"
+    "Класично шишање",
+    "Брада и мустаќи", 
+    "Машинско шишање",
+    "Комплетен третман",
+    "Бритвен",
+    "Детско шишање"
   ];
 
   const timeSlots = [
-    "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
-    "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
-    "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
-    "18:00", "18:30", "19:00", "19:30"
+    "08:00", "08:30", "09:00", "09:30", "10:00", "10:30",
+    "11:00", "11:30", "12:00", "12:30", "13:00", "13:30",
+    "14:00", "14:30", "15:00", "15:30", "16:00", "16:30",
+    "17:00", "17:30", "18:00", "18:30", "19:00", "19:30"
   ];
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -78,10 +78,10 @@ const AppointmentModal = ({ isOpen, onClose }: AppointmentModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-md bg-gradient-to-br from-pink-50 to-purple-50">
+      <DialogContent className="sm:max-w-md bg-gradient-to-br from-slate-50 to-gray-100">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-center text-gray-800 flex items-center justify-center">
-            <Calendar className="h-6 w-6 text-pink-500 mr-2" />
+            <Calendar className="h-6 w-6 text-slate-600 mr-2" />
             Закажи термин
           </DialogTitle>
         </DialogHeader>
@@ -98,7 +98,7 @@ const AppointmentModal = ({ isOpen, onClose }: AppointmentModalProps) => {
                   id="name"
                   value={formData.name}
                   onChange={(e) => handleInputChange("name", e.target.value)}
-                  className="pl-10 border-pink-200 focus:border-pink-500"
+                  className="pl-10 border-slate-200 focus:border-slate-500"
                   placeholder="Внесете го вашето име"
                 />
               </div>
@@ -114,8 +114,8 @@ const AppointmentModal = ({ isOpen, onClose }: AppointmentModalProps) => {
                   id="phone"
                   value={formData.phone}
                   onChange={(e) => handleInputChange("phone", e.target.value)}
-                  className="pl-10 border-pink-200 focus:border-pink-500"
-                  placeholder="070 123 456"
+                  className="pl-10 border-slate-200 focus:border-slate-500"
+                  placeholder="070 987 654"
                 />
               </div>
             </div>
@@ -132,7 +132,7 @@ const AppointmentModal = ({ isOpen, onClose }: AppointmentModalProps) => {
                 type="email"
                 value={formData.email}
                 onChange={(e) => handleInputChange("email", e.target.value)}
-                className="pl-10 border-pink-200 focus:border-pink-500"
+                className="pl-10 border-slate-200 focus:border-slate-500"
                 placeholder="example@email.com"
               />
             </div>
@@ -141,7 +141,7 @@ const AppointmentModal = ({ isOpen, onClose }: AppointmentModalProps) => {
           <div>
             <Label className="text-gray-700 font-medium">Услуга *</Label>
             <Select value={formData.service} onValueChange={(value) => handleInputChange("service", value)}>
-              <SelectTrigger className="border-pink-200 focus:border-pink-500">
+              <SelectTrigger className="border-slate-200 focus:border-slate-500">
                 <SelectValue placeholder="Изберете услуга" />
               </SelectTrigger>
               <SelectContent>
@@ -164,7 +164,7 @@ const AppointmentModal = ({ isOpen, onClose }: AppointmentModalProps) => {
                 type="date"
                 value={formData.date}
                 onChange={(e) => handleInputChange("date", e.target.value)}
-                className="border-pink-200 focus:border-pink-500"
+                className="border-slate-200 focus:border-slate-500"
                 min={new Date().toISOString().split('T')[0]}
               />
             </div>
@@ -172,7 +172,7 @@ const AppointmentModal = ({ isOpen, onClose }: AppointmentModalProps) => {
             <div>
               <Label className="text-gray-700 font-medium">Време *</Label>
               <Select value={formData.time} onValueChange={(value) => handleInputChange("time", value)}>
-                <SelectTrigger className="border-pink-200 focus:border-pink-500">
+                <SelectTrigger className="border-slate-200 focus:border-slate-500">
                   <SelectValue placeholder="Изберете време" />
                 </SelectTrigger>
                 <SelectContent>
@@ -197,7 +197,7 @@ const AppointmentModal = ({ isOpen, onClose }: AppointmentModalProps) => {
             </Button>
             <Button
               type="submit"
-              className="flex-1 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white"
+              className="flex-1 bg-gradient-to-r from-slate-600 to-slate-700 hover:from-slate-700 hover:to-slate-800 text-white"
             >
               Закажи термин
             </Button>

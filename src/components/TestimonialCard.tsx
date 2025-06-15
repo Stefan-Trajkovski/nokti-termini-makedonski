@@ -24,7 +24,7 @@ const TestimonialCard = ({ testimonial }: TestimonialCardProps) => {
         <p className="text-gray-700 mb-4 italic">
           "{testimonial.text}"
         </p>
-        <p className="font-semibold text-rose-600">
+        <p className="font-semibold text-slate-700">
           - {testimonial.name}
         </p>
       </CardContent>
