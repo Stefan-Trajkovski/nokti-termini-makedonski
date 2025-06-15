@@ -18,21 +18,21 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ service }: ServiceCardProps) => {
   return (
-    <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white/90 backdrop-blur-sm overflow-hidden hover:scale-105">
+    <Card className="group hover:shadow-xl transition-all duration-300 border-gray-200 bg-white overflow-hidden hover:scale-105">
       <div className="relative h-48 overflow-hidden">
         <img 
           src={service.image} 
           alt={service.name}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-        <Badge className="absolute top-4 right-4 bg-pink-500 hover:bg-pink-600">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+        <Badge className="absolute top-4 right-4 bg-rose-500 hover:bg-rose-600">
           {service.price}
         </Badge>
       </div>
       
       <CardHeader>
-        <CardTitle className="text-xl font-bold text-gray-800 group-hover:text-pink-600 transition-colors">
+        <CardTitle className="text-xl font-bold text-gray-800 group-hover:text-rose-600 transition-colors">
           {service.name}
         </CardTitle>
         <CardDescription className="text-gray-600">

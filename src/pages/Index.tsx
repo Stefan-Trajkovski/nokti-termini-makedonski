@@ -81,30 +81,30 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-white to-purple-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-pink-500/10"></div>
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-10"></div>
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
+        <div className="absolute inset-0 bg-gradient-to-br from-rose-50 to-pink-50 opacity-50"></div>
+        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')] bg-cover bg-center opacity-5"></div>
         
         <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
           <div className="flex items-center justify-center mb-6">
-            <Sparkles className="h-8 w-8 text-pink-500 mr-2" />
-            <h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-pink-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+            <Sparkles className="h-6 w-6 text-rose-400 mr-2" />
+            <h1 className="text-6xl md:text-8xl font-bold text-gray-800">
               Bella Nails
             </h1>
-            <Sparkles className="h-8 w-8 text-pink-500 ml-2" />
+            <Sparkles className="h-6 w-6 text-rose-400 ml-2" />
           </div>
           
-          <p className="text-xl md:text-2xl text-gray-700 mb-8 leading-relaxed">
+          <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
             Професионален салон за нега на нокти<br />
-            <span className="text-pink-600 font-semibold">Вашата убавина е наша страст</span>
+            <span className="text-rose-600 font-semibold">Вашата убавина е наша страст</span>
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Button 
               onClick={() => setShowAppointmentModal(true)}
-              className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-8 py-3 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="bg-rose-500 hover:bg-rose-600 text-white px-8 py-3 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Calendar className="h-5 w-5 mr-2" />
               Закажи термин
@@ -112,27 +112,16 @@ const Index = () => {
             
             <Button 
               variant="outline" 
-              className="border-2 border-pink-500 text-pink-600 hover:bg-pink-50 px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300"
+              className="border-2 border-rose-500 text-rose-600 hover:bg-rose-50 px-8 py-3 text-lg font-semibold rounded-full transition-all duration-300"
             >
               Погледни услуги
             </Button>
           </div>
         </div>
-        
-        {/* Floating elements */}
-        <div className="absolute top-20 left-10 animate-bounce">
-          <div className="w-4 h-4 bg-pink-400 rounded-full opacity-60"></div>
-        </div>
-        <div className="absolute top-40 right-20 animate-bounce delay-100">
-          <div className="w-6 h-6 bg-purple-400 rounded-full opacity-60"></div>
-        </div>
-        <div className="absolute bottom-40 left-20 animate-bounce delay-200">
-          <div className="w-3 h-3 bg-pink-300 rounded-full opacity-60"></div>
-        </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 px-4 bg-white/80 backdrop-blur-sm">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
@@ -152,7 +141,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-pink-50 to-purple-50">
+      <section className="py-20 px-4 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -172,11 +161,11 @@ const Index = () => {
               
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-600 mb-2">500+</div>
+                  <div className="text-3xl font-bold text-rose-600 mb-2">500+</div>
                   <div className="text-gray-600">Задоволни клиенти</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-600 mb-2">5</div>
+                  <div className="text-3xl font-bold text-rose-600 mb-2">5</div>
                   <div className="text-gray-600">Години искуство</div>
                 </div>
               </div>
@@ -188,8 +177,8 @@ const Index = () => {
                 alt="Салон за нокти" 
                 className="rounded-2xl shadow-2xl"
               />
-              <div className="absolute -top-6 -right-6 w-24 h-24 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full opacity-20"></div>
-              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-gradient-to-r from-purple-400 to-pink-500 rounded-full opacity-20"></div>
+              <div className="absolute -top-6 -right-6 w-24 h-24 bg-rose-200 rounded-full opacity-30"></div>
+              <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-rose-100 rounded-full opacity-40"></div>
             </div>
           </div>
         </div>
@@ -216,7 +205,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4 bg-gradient-to-r from-pink-600 to-purple-600 text-white">
+      <section className="py-20 px-4 bg-rose-500 text-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -230,7 +219,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
               <CardHeader className="text-center">
-                <MapPin className="h-12 w-12 mx-auto mb-4 text-pink-300" />
+                <MapPin className="h-12 w-12 mx-auto mb-4 text-rose-200" />
                 <CardTitle>Адреса</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
@@ -241,7 +230,7 @@ const Index = () => {
             
             <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
               <CardHeader className="text-center">
-                <Phone className="h-12 w-12 mx-auto mb-4 text-pink-300" />
+                <Phone className="h-12 w-12 mx-auto mb-4 text-rose-200" />
                 <CardTitle>Телефон</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
@@ -252,7 +241,7 @@ const Index = () => {
             
             <Card className="bg-white/10 backdrop-blur-sm border-white/20 text-white">
               <CardHeader className="text-center">
-                <Clock className="h-12 w-12 mx-auto mb-4 text-pink-300" />
+                <Clock className="h-12 w-12 mx-auto mb-4 text-rose-200" />
                 <CardTitle>Работно време</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
@@ -266,7 +255,7 @@ const Index = () => {
           <div className="text-center mt-12">
             <Button 
               onClick={() => setShowAppointmentModal(true)}
-              className="bg-white text-pink-600 hover:bg-pink-50 px-8 py-3 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+              className="bg-white text-rose-600 hover:bg-rose-50 px-8 py-3 text-lg font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Calendar className="h-5 w-5 mr-2" />
               Закажи твој термин сега
@@ -280,17 +269,17 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center">
             <div className="flex items-center justify-center mb-4">
-              <Sparkles className="h-6 w-6 text-pink-500 mr-2" />
+              <Sparkles className="h-6 w-6 text-rose-400 mr-2" />
               <h3 className="text-2xl font-bold">Bella Nails</h3>
-              <Sparkles className="h-6 w-6 text-pink-500 ml-2" />
+              <Sparkles className="h-6 w-6 text-rose-400 ml-2" />
             </div>
             <p className="text-gray-400 mb-6">
               Професионален салон за нега на нокти
             </p>
             <div className="flex justify-center space-x-6">
-              <Mail className="h-6 w-6 text-pink-400 hover:text-white cursor-pointer transition-colors" />
-              <Phone className="h-6 w-6 text-pink-400 hover:text-white cursor-pointer transition-colors" />
-              <MapPin className="h-6 w-6 text-pink-400 hover:text-white cursor-pointer transition-colors" />
+              <Mail className="h-6 w-6 text-rose-400 hover:text-white cursor-pointer transition-colors" />
+              <Phone className="h-6 w-6 text-rose-400 hover:text-white cursor-pointer transition-colors" />
+              <MapPin className="h-6 w-6 text-rose-400 hover:text-white cursor-pointer transition-colors" />
             </div>
             <p className="text-gray-500 text-sm mt-8">
               © 2024 Bella Nails. Сите права задржани.
