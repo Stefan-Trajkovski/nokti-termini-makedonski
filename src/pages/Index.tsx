@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Calendar, MapPin, Phone, Mail, Clock, Star, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -15,6 +16,18 @@ const Index = () => {
     if (servicesSection) {
       servicesSection.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const handleEmailClick = () => {
+    window.location.href = 'mailto:info@bellanails.mk';
+  };
+
+  const handlePhoneClick = () => {
+    window.location.href = 'tel:+38970123456';
+  };
+
+  const handleMapClick = () => {
+    window.open('https://maps.google.com/?q=ул.+Македонија+15,+1000+Скопје', '_blank');
   };
 
   const services = [
@@ -284,9 +297,18 @@ const Index = () => {
               Професионален салон за нега на нокти
             </p>
             <div className="flex justify-center space-x-6">
-              <Mail className="h-6 w-6 text-rose-400 hover:text-white cursor-pointer transition-colors" />
-              <Phone className="h-6 w-6 text-rose-400 hover:text-white cursor-pointer transition-colors" />
-              <MapPin className="h-6 w-6 text-rose-400 hover:text-white cursor-pointer transition-colors" />
+              <Mail 
+                className="h-6 w-6 text-rose-400 hover:text-white cursor-pointer transition-colors" 
+                onClick={handleEmailClick}
+              />
+              <Phone 
+                className="h-6 w-6 text-rose-400 hover:text-white cursor-pointer transition-colors" 
+                onClick={handlePhoneClick}
+              />
+              <MapPin 
+                className="h-6 w-6 text-rose-400 hover:text-white cursor-pointer transition-colors" 
+                onClick={handleMapClick}
+              />
             </div>
             <p className="text-gray-500 text-sm mt-8">
               © 2024 Bella Nails. Сите права задржани.
